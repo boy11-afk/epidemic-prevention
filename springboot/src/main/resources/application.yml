@@ -1,0 +1,27 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bishe?serverTimezone=GMT%2b8
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 900MB
+      max-request-size: 900MB
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #因为自己在resources写了个mapper文件夹，里面有xml文件，必须要扫描所有xml文件
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+  upload:
+    path: E:/idea_projects/校园疫情防控管理系统/files/
+
+
